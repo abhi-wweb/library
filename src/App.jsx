@@ -20,7 +20,7 @@ function App() {
   // Fetch files from backend
   const fetchFiles = async () => {
     try {
-      const res = await axios.get("https://library-api-q39x.onrender.com/files");
+      const res = await axios.get("https://library-api-kbks.onrender.com");
       setFiles(res.data);
     } catch (err) {
       console.error("Error fetching files:", err);
