@@ -10,7 +10,7 @@ export default function Home() {
   // Fetch latest 3 uploaded files from backend
   const fetchFeaturedFiles = async () => {
     try {
-      const res = await axios.get("https://library-api-kbks.onrender.com/files");
+      const res = await axios.get("https://library-api-17ch.onrender.com/files");
       // Show latest 3 files
       setFeaturedFiles(res.data.slice(0, 3));
     } catch (err) {
@@ -28,7 +28,7 @@ export default function Home() {
     if (!fileUrl.startsWith("/")) {
       fileUrl = "/" + fileUrl;
     }
-    return `https://library-api-kbks.onrender.com${fileUrl}`;
+    return `https://library-api-17ch.onrender.com${fileUrl}`;
   };
 
   return (

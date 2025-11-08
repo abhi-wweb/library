@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "./assets/logo.jpg";
 import "./Navbar.css";
 
-const API = "https://library-api-kbks.onrender.com";
+const API = "https://library-api-17ch.onrender.com";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

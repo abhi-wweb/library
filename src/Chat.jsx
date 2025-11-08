@@ -19,7 +19,7 @@ export default function Chat() {
 
  const fetchHistory = async () => {
   try {
-    const res = await fetch("https://library-api-kbks.onrender.com/history");
+    const res = await fetch("https://library-api-17ch.onrender.com/history");
     const history = await res.json();
     const formatted = history.flatMap((h) => [
       { role: "user", content: h.question },
@@ -41,7 +41,7 @@ export default function Chat() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://library-api-kbks.onrender.com/ask", {
+      const res = await fetch("https://library-api-17ch.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -100,7 +100,7 @@ export default function Chat() {
 
   const handleClearHistory = async () => {
     try {
-      await fetch("https://library-api-kbks.onrender.com/history", { method: "DELETE" });
+      await fetch("https://library-api-17ch.onrender.com/history", { method: "DELETE" });
       setMessages([]);
     } catch (err) {
       console.error("❌ Clear history error:", err);
